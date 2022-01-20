@@ -2,10 +2,10 @@
 
 namespace Ajimoti\Timer;
 
-use DateTime;
-use Carbon\Carbon;
-use InvalidArgumentException;
 use Ajimoti\Timer\Traits\SupportsMagicCalls;
+use Carbon\Carbon;
+use DateTime;
+use InvalidArgumentException;
 
 final class Time
 {

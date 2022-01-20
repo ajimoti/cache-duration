@@ -2,9 +2,9 @@
 
 namespace Ajimoti\Timer\Traits;
 
-use Ajimoti\Timer\Helpers\Str;
 use Ajimoti\Timer\Exceptions\BadMethodException;
 use Ajimoti\Timer\Exceptions\InvalidMethodNameException;
+use Ajimoti\Timer\Helpers\Str;
 
 trait SupportsMagicCalls
 {
@@ -28,12 +28,12 @@ trait SupportsMagicCalls
                     Str::studlyToSpaceSeparated(Str::eraseSuffix($methodName, $suffix))
                 );
 
-                $method = match($suffix) {
+                $method = match ($suffix) {
                     'second' => 'seconds',
                     'minute' => 'minutes',
-                    'hour'   => 'hours',
-                    'day'    => 'days',
-                    default   => $suffix
+                    'hour' => 'hours',
+                    'day' => 'days',
+                    default => $suffix
                 };
 
                 break;
