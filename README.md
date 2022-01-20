@@ -45,7 +45,7 @@ After installing the package via composer, import the `Duration` trait inside yo
 <?php
 require 'vendor/autoload.php';
 
-Use Ajimoti\CacheDuration\Duration;
+use Ajimoti\CacheDuration\Duration;
 
 var_dump(Duration::fourtyMinutes()); // returns 2400;
 var_dump(Duration::tenHours()); // returns 36000;
@@ -78,7 +78,7 @@ Duration::thirtySevenDays(); // returns the number of seconds in 37 days
 ### `seconds($value)`
 Get time in seconds. It basically returns the same value passed into it.
 ```php
-Use Ajimoti\CacheDuration\Duration;
+use Ajimoti\CacheDuration\Duration;
 
 $cacheDuration = Duration::seconds(30); // returns 30
 
@@ -89,7 +89,7 @@ $cacheDuration = Duration::thirtySeconds(); // returns 30
 ### `minutes($value)`
 Converts time in minutes into seconds.
 ```php
-Use Ajimoti\CacheDuration\Duration;
+use Ajimoti\CacheDuration\Duration;
 
 $cacheDuration = Duration::minutes(55); // returns 55 minutes in seconds (55 * 60)
 
@@ -100,7 +100,7 @@ $cacheDuration = Duration::fiftyFiveMinutes(); // returns 55 minutes in seconds 
 ### `hours($value)`
 Converts time in hours into seconds.
 ```php
-Use Ajimoti\CacheDuration\Duration;
+use Ajimoti\CacheDuration\Duration;
 
 $cacheDuration = Duration::hours(7); // returns 7 hours in seconds (7 * 60 * 60)
 
@@ -111,7 +111,7 @@ $cacheDuration = Duration::sevenHours(); // returns 7 hours in seconds (7 * 60 *
 ### `days($value)`
 Converts time in days into seconds.
 ```php
-Use Ajimoti\CacheDuration\Duration;
+use Ajimoti\CacheDuration\Duration;
 
 $cacheDuration = Duration::days(22); // returns 22 days in seconds (22 * 24 * 60 * 60)
 
