@@ -25,38 +25,38 @@ it('can convert days to seconds', function () {
 it('can calculate the difference in seconds between now and a provided date', function () {
     $twoWeeksTime = Carbon::now()->addWeeks(2);
 
-    expect(Time::till($twoWeeksTime))->toBe(Carbon::now()->diffInSeconds($twoWeeksTime));
+    expect(Time::at($twoWeeksTime))->toBe(Carbon::now()->diffInSeconds($twoWeeksTime));
 });
 
-it('till method can accept a string', function () {
+it('at method can accept a string', function () {
     $year = (int) date('Y') + 1;
 
     $sentence = "first day of January {$year}";
 
-    expect(Time::till("{$year}-01-01"))->toBe(Carbon::createMidnightDate($year, 01, 01)->diffInSeconds(Carbon::now()));
-    expect(Time::till($sentence))->toBe(Carbon::parse($sentence)->diffInSeconds(Carbon::now()));
+    expect(Time::at("{$year}-01-01"))->toBe(Carbon::createMidnightDate($year, 01, 01)->diffInSeconds(Carbon::now()));
+    expect(Time::at($sentence))->toBe(Carbon::parse($sentence)->diffInSeconds(Carbon::now()));
 });
 
-it('till method accepts a string with seconds', function () {
+it('at method accepts a string with seconds', function () {
     $year = (int) date('Y') + 1;
     $sentence = "first day of January {$year} 00:00:00";
 
-    expect(Time::till($sentence))->toBe(Carbon::parse($sentence)->diffInSeconds(Carbon::now()));
+    expect(Time::at($sentence))->toBe(Carbon::parse($sentence)->diffInSeconds(Carbon::now()));
 });
 
-it('till method accepts dateTime instance', function () {
+it('at method accepts dateTime instance', function () {
     $year = (int) date('Y') + 1;
     $sentence = "first day of January {$year}";
 
-    expect(Time::till(new \DateTime($sentence)))->toBe(Carbon::parse($sentence)->diffInSeconds(Carbon::now()));
+    expect(Time::at(new \DateTime($sentence)))->toBe(Carbon::parse($sentence)->diffInSeconds(Carbon::now()));
 });
 
-it('till method accepts carbon instance', function () {
+it('at method accepts carbon instance', function () {
     $carbon = Carbon::now()->addMonths(2);
 
-    expect(Time::till($carbon))->toBe($carbon->diffInSeconds(Carbon::now()));
+    expect(Time::at($carbon))->toBe($carbon->diffInSeconds(Carbon::now()));
 });
 
-it('till method throws an exception when a wrong type is passed', function () {
-    Time::till(1);
+it('at method throws an exception when a wrong type is passed', function () {
+    Time::at(1);
 })->throws(InvalidArgumentException::class);

@@ -28,7 +28,7 @@ final class Time
      */
     final public static function minutes(int $minutes = 1): int
     {
-        return static::sixtySeconds() * $minutes;
+        return static::seconds(60) * $minutes;
     }
 
     /**
@@ -38,7 +38,7 @@ final class Time
      */
     final public static function hours(int $hours = 1): int
     {
-        return static::sixtyMinutes() * $hours;
+        return static::minutes(60) * $hours;
     }
 
     /**
@@ -48,7 +48,7 @@ final class Time
      */
     final public static function days(int $days = 1): int
     {
-        return static::twentyFourHours() * $days;
+        return static::hours(24) * $days;
     }
 
     /**
@@ -56,7 +56,7 @@ final class Time
      *
      * @param DateTime|Carbon|string $value - string can be HH:MM:SS or HH:MM
      */
-    final public static function till(DateTime|Carbon|string $value): int
+    final public static function at(DateTime|Carbon|string $value): int
     {
         if ($value instanceof Carbon) {
             $now = Carbon::now();
@@ -69,11 +69,11 @@ final class Time
         }
 
         if ($value instanceof DateTime) {
-            return static::till(Carbon::instance($value));
+            return static::at(Carbon::instance($value));
         }
 
         if (is_string($value)) {
-            return static::till(Carbon::parse($value));
+            return static::at(Carbon::parse($value));
         }
 
         throw new InvalidArgumentException('Invalid value provided.');
