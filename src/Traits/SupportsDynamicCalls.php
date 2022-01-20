@@ -3,7 +3,6 @@
 namespace Ajimoti\Timer\Traits;
 
 use Ajimoti\Timer\Exceptions\BadMethodException;
-use Ajimoti\Timer\Exceptions\InvalidMethodNameException;
 use Ajimoti\Timer\Helpers\Str;
 
 trait SupportsDynamicCalls
