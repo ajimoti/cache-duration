@@ -1,5 +1,5 @@
 # PHP Cache Duration
-![Banner](https://banners.beyondco.de/Cache%20Time%20Package.png?theme=dark&packageManager=composer+require&packageName=ajimoti%2Fcache-time&pattern=charlieBrown&style=style_1&description=A+more+readable+way+to+get+time+in+seconds+while+caching&md=1&showWatermark=1&fontSize=100px&images=clock)
+![Banner](https://banners.beyondco.de/Cache%20Duration%20Package.png?theme=dark&packageManager=composer+require&packageName=ajimoti%2Fcache-duration&pattern=charlieBrown&style=style_1&description=A+more+readable+way+to+get+time+in+seconds+while+caching&md=1&showWatermark=1&fontSize=100px&images=clock)
 
 ## Introduction
 A readable and fluent way to generate PHP cache time.
