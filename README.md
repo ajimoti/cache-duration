@@ -25,7 +25,7 @@ composer require ajimoti/php-timer
 ## Usage
 
 ```php
-$skeleton = new Ajimoti\Timer();
+$skeleton = new Ajimoti\CacheTime();
 echo $skeleton->echoPhrase('Hello, Ajimoti!');
 ```
 

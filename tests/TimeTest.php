@@ -1,7 +1,7 @@
 <?php
 
 use Carbon\Carbon;
-use Ajimoti\Timer\Time;
+use Ajimoti\CacheTime\Time;
 
 it('can return time in seconds', function () {
     expect(Time::seconds(1))->toBe(1);

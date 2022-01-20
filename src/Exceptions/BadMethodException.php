@@ -1,6 +1,6 @@
 <?php
 
-namespace Ajimoti\Timer\Exceptions;
+namespace Ajimoti\CacheTime\Exceptions;
 
 use BadMethodCallException;
 

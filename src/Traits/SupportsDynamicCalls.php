@@ -1,10 +1,10 @@
 <?php
 
-namespace Ajimoti\Timer\Traits;
+namespace Ajimoti\CacheTime\Traits;
 
-use Ajimoti\Timer\Exceptions\BadMethodException;
-use Ajimoti\Timer\Exceptions\InvalidMethodNameException;
-use Ajimoti\Timer\Helpers\Str;
+use Ajimoti\CacheTime\Exceptions\BadMethodException;
+use Ajimoti\CacheTime\Exceptions\InvalidMethodNameException;
+use Ajimoti\CacheTime\Helpers\Str;
 
 trait SupportsDynamicCalls
 {

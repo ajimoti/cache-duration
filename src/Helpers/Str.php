@@ -1,6 +1,6 @@
 <?php
 
-namespace Ajimoti\Timer\Helpers;
+namespace Ajimoti\CacheTime\Helpers;
 
 use InvalidArgumentException;
 use SplStack;

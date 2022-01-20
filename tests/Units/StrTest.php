@@ -1,6 +1,6 @@
 <?php
 
-use Ajimoti\Timer\Helpers\Str;
+use Ajimoti\CacheTime\Helpers\Str;
 
 it('can correctly pluralize method names', function () {
     $singleToPlural = [

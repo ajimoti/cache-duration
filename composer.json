@@ -1,11 +1,11 @@
 {
-    "name": "ajimoti/timer",
-    "description": "This is my package php-timer",
+    "name": "ajimoti/php-cache-time",
+    "description": "This package provides a more readable way to get time in seconds while caching.",
     "keywords": [
         "ajimoti",
-        "php-timer"
+        "cache-time"
     ],
-    "homepage": "https://github.com/ajimoti/php-timer",
+    "homepage": "https://github.com/ajimoti/php-cache-time",
     "license": "MIT",
     "authors": [
         {
@@ -25,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Ajimoti\\Timer\\": "src"
+            "Ajimoti\\CacheTime\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Ajimoti\\Timer\\Tests\\": "tests"
+            "Ajimoti\\CacheTime\\Tests\\": "tests"
         }
     },
     "scripts": {

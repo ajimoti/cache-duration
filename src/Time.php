@@ -1,8 +1,8 @@
 <?php
 
-namespace Ajimoti\Timer;
+namespace Ajimoti\CacheTime;
 
-use Ajimoti\Timer\Traits\SupportsDynamicCalls;
+use Ajimoti\CacheTime\Traits\SupportsDynamicCalls;
 use Carbon\Carbon;
 use DateTime;
 use InvalidArgumentException;
