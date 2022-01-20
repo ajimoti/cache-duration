@@ -2,8 +2,8 @@
 
 namespace Ajimoti\Timer;
 
-use DateTime;
 use Carbon\Carbon;
+use DateTime;
 use InvalidArgumentException;
 use Ajimoti\Timer\Traits\SupportsDynamicCalls;
 
