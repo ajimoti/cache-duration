@@ -3,9 +3,11 @@
     "description": "This package provides a more readable way to get time in seconds while caching.",
     "keywords": [
         "ajimoti",
-        "cache-time"
+        "cache-time",
+        "cache",
+        "time"
     ],
-    "homepage": "https://github.com/ajimoti/php-cache-time",
+    "homepage": "https://github.com/ajimoti/cache-time",
     "license": "MIT",
     "authors": [
         {
