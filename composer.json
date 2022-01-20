@@ -1,5 +1,5 @@
 {
-    "name": "ajimoti/php-cache-time",
+    "name": "ajimoti/cache-time",
     "description": "This package provides a more readable way to get time in seconds while caching.",
     "keywords": [
         "ajimoti",
