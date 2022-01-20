@@ -15,7 +15,7 @@ it('can correctly pluralize method names', function () {
     }
 });
 
-it('can correctly convert words to numbers', function() {
+it('can correctly convert words to numbers', function () {
     $wordsToNumbers = [
         'one' => 1,
         'two' => 2,
@@ -38,7 +38,7 @@ it('can correctly convert words to numbers', function() {
     }
 });
 
-it ('can correctly convert studly to space separated', function() {
+it('can correctly convert studly to space separated', function () {
     $studlyCaseToSpaceSeparated = [
         'thisIsALongWord' => 'this is a long word',
         'thisIsALongWordWithNumbers' => 'this is a long word with numbers',

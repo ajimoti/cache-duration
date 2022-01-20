@@ -44,13 +44,13 @@ it('can convert days to seconds dynamically', function () {
 });
 
 it('throws an exception when the method name does not have a valid number in words', function () {
-    expect(fn() => Time::tenthMinute(1))->toThrow(InvalidArgumentException::class);
-    expect(fn() => Time::tinyDay(1))->toThrow(InvalidArgumentException::class);
-    expect(fn() => Time::fiftyfiveHours(1))->toThrow(InvalidArgumentException::class);
+    expect(fn () => Time::tenthMinute(1))->toThrow(InvalidArgumentException::class);
+    expect(fn () => Time::tinyDay(1))->toThrow(InvalidArgumentException::class);
+    expect(fn () => Time::fiftyfiveHours(1))->toThrow(InvalidArgumentException::class);
 });
 
 it('throws an exception when the method name does not have the correct suffix', function () {
-    expect(fn() => Time::fiveMinutenn(1))->toThrow(BadMethodException::class);
-    expect(fn() => Time::tenDayers(1))->toThrow(BadMethodException::class);
-    expect(fn() => Time::fiftyFiveHoures(1))->toThrow(BadMethodException::class);
+    expect(fn () => Time::fiveMinutenn(1))->toThrow(BadMethodException::class);
+    expect(fn () => Time::tenDayers(1))->toThrow(BadMethodException::class);
+    expect(fn () => Time::fiftyFiveHoures(1))->toThrow(BadMethodException::class);
 });

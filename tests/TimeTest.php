@@ -19,7 +19,7 @@ it('can convert hours to seconds', function () {
 
 it('can convert days to seconds', function () {
     $randomDay = random_int(1, 100);
-    expect(Time::days($randomDay))->toBe(60 * 60 * 24 *$randomDay);
+    expect(Time::days($randomDay))->toBe(60 * 60 * 24 * $randomDay);
 });
 
 it('can calculate the difference in seconds between now and a provided date', function () {
@@ -60,4 +60,3 @@ it('till method accepts carbon instance', function () {
 it('till method throws an exception when a wrong type is passed', function () {
     Time::till(1);
 })->throws(InvalidArgumentException::class);
-
