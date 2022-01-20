@@ -2,10 +2,10 @@
 
 namespace Ajimoti\Timer;
 
+use Ajimoti\Timer\Traits\SupportsDynamicCalls;
 use Carbon\Carbon;
 use DateTime;
 use InvalidArgumentException;
-use Ajimoti\Timer\Traits\SupportsDynamicCalls;
 
 final class Time
 {

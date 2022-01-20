@@ -2,9 +2,9 @@
 
 namespace Ajimoti\Timer\Traits;
 
-use Ajimoti\Timer\Helpers\Str;
 use Ajimoti\Timer\Exceptions\BadMethodException;
 use Ajimoti\Timer\Exceptions\InvalidMethodNameException;
+use Ajimoti\Timer\Helpers\Str;
 
 trait SupportsDynamicCalls
 {
@@ -42,12 +42,12 @@ trait SupportsDynamicCalls
             implode(' ', array_diff($wordsInMethodName, [$suffix]))
         );
 
-        $method = match($suffix) {
+        $method = match ($suffix) {
             'second' => 'seconds',
             'minute' => 'minutes',
-            'hour'   => 'hours',
-            'day'    => 'days',
-            default   => $suffix
+            'hour' => 'hours',
+            'day' => 'days',
+            default => $suffix
         };
 
         return static::$method($value);
