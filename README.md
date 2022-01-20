@@ -36,7 +36,7 @@ Redis::expire(['example'], $cacheTime);
 ## Installation
 You can install the package via composer:
 ```bash
-composer require ajimoti/cache-time
+composer require ajimoti/cache-time --with-all-dependencies
 ```
 
 ## Documentation
@@ -120,9 +120,9 @@ $cacheTime = Time::sevenHours(); // returns 22 days in seconds (22 * 24 * 60 * 6
 ### `at($value)`
 This method allows you to convert a `Carbon\Carbon` instance, `DateTime` instance or  `string` of date into seconds. 
 
-The method returns the difference in seconds between the arguement passed and the current `timestamp`.
+The method returns the difference in seconds between the argument passed and the current `timestamp`.
 
-> The date passed into this method **MUST** be a date in the future.
+> The date passed into this method **MUST** be a date in the future. When a string is passed, the text **MUST** be compatible with `Carbon::parse()` method, else an exception will be thrown
 
 #### Examples
 ```php
@@ -137,7 +137,7 @@ $cacheTime = Time::at(Carbon::now()->addMonths(3)); // returns time in seconds b
 $cacheTime = Time::at(new DateTime('2039-09-30')); // returns time in seconds between the present timestamp and the date passed (2039-09-30).
 
 // String
-$cacheTime = Time::at('first day of January 2023'); // returns time in seconds between the present timestamp and the first of Januray 2023.
+$cacheTime = Time::at('first day of January 2023'); // returns time in seconds between the present timestamp and the first of January 2023.
 ```
 
 ## Testing
