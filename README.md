@@ -53,12 +53,11 @@ var_dump(Time::fourtyMinutes()); // returns 40 * 60 * 60;
 ### Available methods
 | Method      | Expectations | 
 | ----------- | ----------- |
-| seconds($value)      | Expects time in seconds  |
-| minutes($value)   | Expects time in minutes  |
-| hours($value)   | Expects time in hours  |
-| days($value)   | Expects time in days  |
-| at($value)   | Expects `string`, `carbon` instance, or `DateTime` instance  |
-| {$studlyCaseNumberInWord}{Unit}($value)   | Expects time in the same unit  |
+| [seconds($value)](#secondsvalue)  | Expects time in seconds  |
+| [minutes($value)](#minutesvalue)   | Expects time in minutes  |
+| [hours($value)](#hoursvalue)  | Expects time in hours  |
+| [days($value)](#daysvalue) | Expects time in days  |
+| [at($value)](#atvalue)  | Expects `string`, `carbon` instance, or `DateTime` instance  |
 
 ### Dynamic calls
 In addition to the methods provided above, the package uses `PHP` `__callStatic()` method to allow you make dynamic calls on the `Time` trait.
@@ -140,3 +139,30 @@ $cacheTime = Time::at(new DateTime('2039-09-30')); // returns time in seconds be
 // String
 $cacheTime = Time::at('first day of January 2023'); // returns time in seconds between the present timestamp and the first of Januray 2023.
 ```
+
+## Testing
+
+```bash
+composer test
+```
+
+## Changelog
+
+Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
+
+## Contributing
+
+Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
+
+## Security Vulnerabilities
+
+Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
+
+## Credits
+
+- [ajibukunoluwa](https://github.com/ajimoti)
+- [All Contributors](../../contributors)
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
