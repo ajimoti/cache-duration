@@ -1,9 +1,9 @@
 <?php
 
-namespace Ajimoti\CacheTime\Traits;
+namespace Ajimoti\CacheDuration\Traits;
 
-use Ajimoti\CacheTime\Exceptions\BadMethodException;
-use Ajimoti\CacheTime\Helpers\Str;
+use Ajimoti\CacheDuration\Exceptions\BadMethodException;
+use Ajimoti\CacheDuration\Helpers\Str;
 
 trait SupportsDynamicCalls
 {

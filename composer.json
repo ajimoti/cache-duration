@@ -1,13 +1,13 @@
 {
-    "name": "ajimoti/cache-time",
+    "name": "ajimoti/cache-duration",
     "description": "This package provides a more readable way to get time in seconds while caching.",
     "keywords": [
         "ajimoti",
-        "cache-time",
+        "cache-duration",
         "cache",
-        "time"
+        "duration"
     ],
-    "homepage": "https://github.com/ajimoti/cache-time",
+    "homepage": "https://github.com/ajimoti/cache-duration",
     "license": "MIT",
     "authors": [
         {
@@ -27,12 +27,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Ajimoti\\CacheTime\\": "src"
+            "Ajimoti\\CacheDuration\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Ajimoti\\CacheTime\\Tests\\": "tests"
+            "Ajimoti\\CacheDuration\\Tests\\": "tests"
         }
     },
     "scripts": {

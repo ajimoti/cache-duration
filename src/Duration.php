@@ -1,13 +1,13 @@
 <?php
 
-namespace Ajimoti\CacheTime;
+namespace Ajimoti\CacheDuration;
 
-use Ajimoti\CacheTime\Traits\SupportsDynamicCalls;
+use Ajimoti\CacheDuration\Traits\SupportsDynamicCalls;
 use Carbon\Carbon;
 use DateTime;
 use InvalidArgumentException;
 
-final class Time
+final class Duration
 {
     use SupportsDynamicCalls;
 
