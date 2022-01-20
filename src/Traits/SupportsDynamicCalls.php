@@ -50,10 +50,6 @@ trait SupportsDynamicCalls
             default   => $suffix
         };
 
-        if (isset($method) && empty($value)) {
-            throw new InvalidMethodNameException($methodName);
-        }
-
         return static::$method($value);
     }
 }
