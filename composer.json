@@ -1,21 +1,22 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "ajimoti/timer",
+    "description": "This is my package php-timer",
     "keywords": [
-        ":vendor_name",
-        ":package_slug"
+        "ajimoti",
+        "php-timer"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/ajimoti/php-timer",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "ajimoti",
+            "email": "ibukunajmoti@gmail.com",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^8.0"
+        "php": "^8.0",
+        "nesbot/carbon": "^2.55"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.0",
@@ -24,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src"
+            "Ajimoti\\Timer\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Ajimoti\\Timer\\Tests\\": "tests"
         }
     },
     "scripts": {
