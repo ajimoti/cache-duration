@@ -160,7 +160,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [ajibukunoluwa](https://github.com/ajimoti)
+- [ajimoti](https://github.com/ajimoti)
 - [All Contributors](../../contributors)
 
 ## License
