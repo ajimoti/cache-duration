@@ -10,24 +10,24 @@ Built and written by [Ajimoti Ibukun](https://www.linkedin.com/in/ibukun-ajimoti
 Instead of this:
 ```php
 $cacheDuration = 25 * 60 * 60; // twenty five hours
-Redis::expire(['example'], $cacheDuration);
+Redis::expire($userData, $cacheDuration);
 ```
 
 You can do this
 ```php
 $cacheDuration = Duration::twentyFiveHours(); // returns 25 hours in seconds (25 * 60 * 60)
-Redis::expire(['example'], $cacheDuration);
+Redis::expire($userData, $cacheDuration);
 
 // or
 $cacheDuration = Duration::hours(25); // returns 25 hours in seconds (25 * 60 * 60)
-Redis::expire(['example'], $cacheDuration);
+Redis::expire($userData, $cacheDuration);
 ```
 
 You can also do this:
 ```php
 $cacheDuration = Duration::at('first day of January 2023'); // returns the time difference between the present time and the first of january 2023 in seconds
 
-Redis::expire(['example'], $cacheDuration);
+Redis::expire($userData, $cacheDuration);
 ```
 
 ## Requirements
