@@ -5,11 +5,11 @@ namespace Ajimoti\Timer;
 use DateTime;
 use Carbon\Carbon;
 use InvalidArgumentException;
-use Ajimoti\Timer\Traits\SupportsMagicCalls;
+use Ajimoti\Timer\Traits\SupportsDynamicCalls;
 
 final class Time
 {
-    use SupportsMagicCalls;
+    use SupportsDynamicCalls;
 
     /**
      * Returns the time in seconds.
@@ -79,8 +79,13 @@ final class Time
         throw new InvalidArgumentException('Invalid value provided.');
     }
 
+    /**
+     * Handle dynamic static method calls on the class.
+     *
+     * @var int
+     */
     public static function __callStatic($methodName, $arguments)
     {
-        return static::doMagic($methodName);
+        return static::dynamicCall($methodName);
     }
 }

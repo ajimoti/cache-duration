@@ -14,27 +14,16 @@ class Str
      */
     protected static $wordsToNumberCache = [];
 
-    public static function contains(string $string, string $needle)
-    {
-        return strpos($string, $needle) !== false;
-    }
-
-    public static function startsWith(string $string, string $needle)
-    {
-        return substr($string, 0, strlen($needle)) === $needle;
-    }
-
-    public static function endsWith(string $string, string $needle)
-    {
-        return substr($string, - strlen($needle)) === $needle;
-    }
-
-    public static function eraseSuffix(string $string, string $suffix)
-    {
-        return substr($string, 0, - strlen($suffix));
-    }
-
-    public static function simplePluralize(string $word)
+    /**
+     * Get the plural of a string.
+     *
+     * Basically appends an `s` to argument provided
+     *
+     * @param string $word
+     *
+     * @return string
+     */
+    public static function simplePluralize(string $word): string
     {
         return $word . 's';
     }
@@ -43,13 +32,13 @@ class Str
     * Convert a string such as "one hundred thousand" to 100000
     * This is useful for converting strings like "one hundred thousand" to numbers.
     *
-    * Gotten from https://stackoverflow.com/a/11219737/16163383
+    * Credit: https://stackoverflow.com/a/11219737/16163383
     *
     * @param string $data The numeric string.
     *
     * @return int The numeric value.
     */
-    public static function wordsToNumber($data)
+    public static function wordsToNumber($data): int
     {
         if (isset(static::$wordsToNumberCache[$data])) {
             return static::$wordsToNumberCache[$data];
@@ -151,7 +140,13 @@ class Str
         return static::$wordsToNumberCache[$data] = (int) ($sum + $stack->pop());
     }
 
-    // convert StudlyCase to space separated words
+    /**
+     * Convert a studly case string to space separated words.
+     *
+     * @param string $string
+     *
+     * @return string
+     */
     public static function studlyToSpaceSeparated(string $string): string
     {
         $words = array_map(function ($word) {
