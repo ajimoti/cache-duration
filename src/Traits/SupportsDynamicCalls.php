@@ -3,7 +3,6 @@
 namespace Ajimoti\CacheTime\Traits;
 
 use Ajimoti\CacheTime\Exceptions\BadMethodException;
-use Ajimoti\CacheTime\Exceptions\InvalidMethodNameException;
 use Ajimoti\CacheTime\Helpers\Str;
 
 trait SupportsDynamicCalls

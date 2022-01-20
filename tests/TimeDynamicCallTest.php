@@ -1,7 +1,7 @@
 <?php
 
-use Ajimoti\CacheTime\Time;
 use Ajimoti\CacheTime\Exceptions\BadMethodException;
+use Ajimoti\CacheTime\Time;
 
 beforeEach(function () {
     $wordsToNumbers = [
