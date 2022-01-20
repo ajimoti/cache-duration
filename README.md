@@ -74,7 +74,7 @@ Time::thirtySevenDays(); // returns the number of seconds in 37 days
 
 ## Usage
 ### `seconds($value)`
-Get time in seconds. It bascally returns the same value passed into it.
+Get time in seconds. It basically returns the same value passed into it.
 ```php
 Use Ajimoti\CacheTime\Time;
 
@@ -114,7 +114,7 @@ Use Ajimoti\CacheTime\Time;
 $cacheTime = Time::days(22); // returns 22 days in seconds (22 * 24 * 60 * 60)
 
 // or dynamically
-$cacheTime = Time::sevenHours(); // returns 22 days in seconds (22 * 24 * 60 * 60)
+$cacheTime = Time::twentyTwoHours(); // returns 22 days in seconds (22 * 24 * 60 * 60)
 ```
 
 ### `at($value)`
