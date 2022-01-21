@@ -116,13 +116,13 @@ use Ajimoti\CacheDuration\Duration;
 $cacheDuration = Duration::days(22); // returns 22 days in seconds (22 * 24 * 60 * 60)
 
 // or dynamically
-$cacheDuration = Duration::twentyTwoHours(); // returns 22 days in seconds (22 * 24 * 60 * 60)
+$cacheDuration = Duration::twentyTwoDays(); // returns 22 days in seconds (22 * 24 * 60 * 60)
 ```
 
 ### `at($value)`
 This method allows you to convert a `Carbon\Carbon` instance, `DateTime` instance or  `string` of date into seconds. 
 
-The method returns the difference in seconds between the argument passed and the current `timestamp`.
+It returns the difference in seconds between the argument passed and the current `timestamp`.
 
 > The date passed into this method **MUST** be a date in the future. When a string is passed, the text **MUST** be compatible with `Carbon::parse()` method, else an exception will be thrown
 
