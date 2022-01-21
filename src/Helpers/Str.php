@@ -40,8 +40,9 @@ class Str
     */
     public static function wordsToNumber($data): int
     {
-        if (isset(static::$wordsToNumberCache[$data])) {
-            return static::$wordsToNumberCache[$data];
+        $key = $data;
+        if (isset(static::$wordsToNumberCache[$key])) {
+            return static::$wordsToNumberCache[$key];
         }
 
         $wordsToValue = [
@@ -139,17 +140,17 @@ class Str
             $last = $part;
         }
 
-        return static::$wordsToNumberCache[$data] = (int) ($sum + $stack->pop());
+        return static::$wordsToNumberCache[$key] = (int) ($sum + $stack->pop());
     }
 
     /**
-     * Convert a studly case string to space separated words.
+     * Convert a camel case string to space separated words.
      *
      * @param string $string
      *
      * @return string
      */
-    public static function studlyToSpaceSeparated(string $string): string
+    public static function camelToSpaceSeparated(string $string): string
     {
         $words = array_map(function ($word) {
             return strtolower($word);

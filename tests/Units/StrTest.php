@@ -38,15 +38,15 @@ it('can correctly convert words to numbers', function () {
     }
 });
 
-it('can correctly convert studly to space separated', function () {
-    $studlyCaseToSpaceSeparated = [
+it('can correctly convert camel to space separated', function () {
+    $camelCaseToSpaceSeparated = [
         'thisIsALongWord' => 'this is a long word',
         'thisIsALongWordWithNumbers' => 'this is a long word with numbers',
         'thisIsALongWordWithNumbersAndSymbols' => 'this is a long word with numbers and symbols',
         'iNeedAJob' => 'i need a job',
     ];
 
-    foreach ($studlyCaseToSpaceSeparated as $studly => $space) {
-        expect(Str::studlyToSpaceSeparated($studly))->toBe($space);
+    foreach ($camelCaseToSpaceSeparated as $camel => $space) {
+        expect(Str::camelToSpaceSeparated($camel))->toBe($space);
     }
 });

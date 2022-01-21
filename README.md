@@ -64,14 +64,14 @@ var_dump(Duration::fiftyFourDays()); // returns 4665600;
 ### Dynamic calls
 In addition to the methods provided above, the package uses `PHP` `__callStatic()` method to allow you make dynamic calls on the `Duration` trait.
 
-For example, you want to get the number of seconds in 37 days, you can achieve this by calling a `studly-case` text of the number (`thirtySeven` in this case), plus the unit (`Days` in this case). That will leave us with something like this:
+For example, you want to get the number of seconds in 37 days, you can achieve this by calling a `camel-case` text of the number (`thirtySeven` in this case), plus the unit (`Days` in this case). That will leave us with something like this:
 
 ```php
-// The formula = studlyCaseOfTheNumberInWords + Unit
+// The formula = camelCaseOfTheNumberInWords + Unit
 Duration::thirtySevenDays(); // returns the number of seconds in 37 days
 ```
 
-> **Note:** The number in words **MUST** be in `studly-case`. Any other case will throw an `InvalidArgumentException`. Additionally, it must be followed by a `title-case` of the unit. The available units are `Seconds`, `Minutes`, `Hours`, and `Days`.
+> **Note:** The number in words **MUST** be in `camel-case`. Any other case will throw an `InvalidArgumentException`. Additionally, it must be followed by a `title-case` of the unit. The available units are `Seconds`, `Minutes`, `Hours`, and `Days`.
 
 
 ## Usage

@@ -30,7 +30,7 @@ trait SupportsDynamicCalls
      */
     public static function dynamicCall($methodName): int
     {
-        $wordsInMethodName = explode(' ', Str::studlyToSpaceSeparated($methodName));
+        $wordsInMethodName = explode(' ', Str::camelToSpaceSeparated($methodName));
         $suffix = end($wordsInMethodName);
 
         if (! in_array($suffix, static::allowedSuffixes())) {
